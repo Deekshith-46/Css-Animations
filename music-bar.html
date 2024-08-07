@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        audio {
+            width: 45%;
+            border-radius: 20px;
+            background-color: rgb(11, 11, 196);
+            margin-bottom: 15%;
+        }
+
+        audio:hover {
+            opacity: 0.8;
+            background-color: black;
+        }
+
+        .lines {
+            display: grid;
+            grid-template-areas: 'a a a a a';
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+
+        }
+
+        .line1 {
+            width: 10vw;
+            height: 12px;
+            background-color: rgb(15, 12, 12);
+            border-radius: 20px;
+            position: absolute;
+            left: 20%;
+            top: 240%;
+
+        }
+
+        .line2 {
+            width: 2vw;
+            height: 50px;
+            background-color: lightcoral;
+            border-radius: 20px;
+            position: absolute;
+            left: 32%;
+            top: 70%;
+            animation-name: line-2;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+
+        }
+
+        .line3 {
+            width: 2vw;
+            height: 110px;
+            background-color: lightcoral;
+            border-radius: 20px;
+            position: absolute;
+            left: 36%;
+            top: -180%;
+            animation-name: line-3;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        .line4 {
+            width: 2vw;
+            height: 150px;
+            background-color: lightcoral;
+            border-radius: 20px;
+            position: absolute;
+            left: 40%;
+            top: -380%;
+            animation-name: line-4;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        .line5 {
+            width: 2vw;
+            height: 70px;
+            background-color: lightcoral;
+            border-radius: 20px;
+            position: absolute;
+            left: 44%;
+            top: -10%;
+            animation-name: line-5;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        .line6 {
+            width: 2vw;
+            height: 100px;
+            background-color: lightcoral;
+            border-radius: 20px;
+            position: absolute;
+            left: 48%;
+            top: -140%;
+            animation-name: line-6;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        .line7 {
+            width: 2vw;
+            height: 80px;
+            background-color: lightcoral;
+            border-radius: 20px;
+            position: absolute;
+            left: 52%;
+            top: -50%;
+            animation-name: line-7;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        .line8 {
+            width: 2vw;
+            height: 50px;
+            background-color: lightcoral;
+            border-radius: 20px;
+            position: absolute;
+            left: 56%;
+            top: 70%;
+            animation-name: line-8;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        .line9 {
+            width: 2vw;
+            height: 130px;
+            background-color: lightcoral;
+            border-radius: 20px;
+            position: absolute;
+            left: 60%;
+            top: -300%;
+            animation-name: line-9;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        .line10 {
+            width: 2vw;
+            height: 90px;
+            background-color: lightcoral;
+            border-radius: 20px;
+            position: absolute;
+            left: 64%;
+            top: -100%;
+            animation-name: line-10;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        .line11 {
+            width: 2vw;
+            height: 60px;
+            background-color: lightcoral;
+            border-radius: 20px;
+            position: absolute;
+            left: 68%;
+            top: 30%;
+            animation-name: line-11;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        .line12 {
+            width: 10vw;
+            height: 12px;
+            background-color: black;
+            border-radius: 20px;
+            position: absolute;
+            left: 72%;
+            top: 240%;
+            animation-name: line-12;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+        /* .music-container{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .img-1-1, .img-2, .img-3{
+            flex-basis: 40%;
+            position: relative;
+            left: -50px;
+        }
+        .img-3{
+            top: 5px;
+            width: 180%;
+        } */
+        @keyframes line-2 {
+            from {
+                background-color: red;
+            }
+
+            to {
+                transform: translateY(-30px);
+                height: 100px;
+            }
+        }
+
+        @keyframes line-3 {
+            from {
+                background-color: rgb(9, 226, 82);
+            }
+
+            to {
+                transform: translateY(20px);
+                height: 150px;
+            }
+        }
+
+        @keyframes line-4 {
+            from {
+                background-color: rgb(20, 23, 201);
+            }
+
+            to {
+                transform: translateY(-20px);
+                height: 150px;
+            }
+        }
+
+        @keyframes line-5 {
+            from {
+                background-color: rgb(204, 27, 124);
+            }
+
+            to {
+                transform: translateY(-40px);
+                height: 80px;
+            }
+        }
+
+        @keyframes line-6 {
+            from {
+                background-color: red;
+            }
+
+            to {
+                transform: translateY(30px);
+                height: 100px;
+            }
+        }
+
+        @keyframes line-7 {
+            from {
+                background-color: rgb(167, 197, 34);
+            }
+
+            to {
+                transform: translateY(-30px);
+                height: 90px;
+            }
+        }
+
+        @keyframes line-8 {
+            from {
+                background-color: red;
+            }
+
+            to {
+                transform: translateY(20px);
+                height: 70px;
+            }
+        }
+
+        @keyframes line-9 {
+            from {
+                background-color: rgb(19, 184, 235);
+            }
+
+            to {
+                transform: translateY(30px);
+                height: 80px;
+            }
+        }
+
+        @keyframes line-10 {
+            from {
+                background-color: rgb(64, 21, 218);
+            }
+
+            to {
+                transform: translateY(-40px);
+                height: 150px;
+            }
+        }
+
+        @keyframes line-11 {
+            from {
+                background-color: rgba(42, 209, 19, 0.555);
+            }
+
+            to {
+                transform: translateY(-30px);
+                height: 100px;
+            }
+        }
+
+        @media screen and (min-width:350px) and (max-width:700px) {
+            .bg {
+                background-image: url("https://i.pinimg.com/736x/39/74/da/3974daa90363c47bcbffa6dd07e7cc33.jpg");
+                background-size: cover;
+                height: 100vh;
+                padding: 10%;
+            }
+
+            .music-container {
+                width: 90%;
+                height: 100%;
+                background-color: white;
+                text-align: center;
+                padding-top: 20px;
+                display: grid;
+                grid-template-areas: 'a';
+            }
+
+            img {
+                width: 20%;
+
+                box-shadow: 2px 2px 25px lightcoral;
+            }
+        }
+
+        @media screen and (min-width:701px) and (max-width:1000px) {
+            .bg {
+                background-image: url("https://img.freepik.com/free-vector/glowing-shiny-musical-notes-background-design_1017-32856.jpg");
+                background-size: cover;
+                height: 100vh;
+                padding: 10%;
+            }
+
+            .music-container {
+                width: 90%;
+                height: 100%;
+                background-color: white;
+                text-align: center;
+                padding-top: 20px;
+                display: grid;
+                grid-template-areas: 'a ';
+            }
+
+            img {
+                width: 20%;
+                box-shadow: 2px 2px 25px lightcoral;
+            }
+        }
+
+        @media screen and (min-width : 1001px) {
+            .bg {
+                background-image: url("https://img.freepik.com/free-vector/musical-notes-frame-with-text-space_1017-32857.jpg");
+                background-size: cover;
+                height: 100vh;
+                padding-top: 6%;
+                padding-bottom: 6%;
+                
+            }
+
+            .music-container {
+                width: 90%;
+                height: 100%;
+                background-color: white;
+                text-align: center;
+                padding-top: 20px;
+                display: grid;
+                grid-template-areas: 'a a a';
+            }
+
+            img {
+                width: 20%;
+                box-shadow: 2px 2px 25px lightcoral;
+            }
+
+            .line1 {
+                width: 3vw;
+                left: 15%;
+                top: 240%;
+            }
+            .line2 {
+                width: 1vw;
+                left: 28%;
+            }
+            .line3{
+                width: 1vw;
+                left: 34%;
+            }
+            .line4{
+                width: 1vw;
+                left: 40%;
+            }
+            .line5{
+                width: 1vw;
+                left: 46%;
+            }
+            .line6{
+                width: 1vw;
+                left:52%;
+            }
+            .line7{
+                width: 1vw;
+                left: 58%;
+            }
+            .line8{
+                width: 1vw;
+                left: 64%;
+            }
+            .line9{
+                width: 1vw;
+                left: 70%;
+            }
+            .line10{
+                width: 1vw;
+                left: 76%;
+            }
+            .line11{
+                width: 1vw;
+                left: 82%;
+            }
+            .line12{
+                width: 3vw;
+                left: 88%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="music-container">
+            <div class="img-1 img-1-1">
+                <img src="./kalki-2898-ad-contemplating-new-release-date_b_1504240113.jpg" alt=""><br><br>
+                <audio controls>
+                    <source src="./[iSongs.info] 03 - Ta Takkara Takka Takkara (Bit).mp3" type="audio/mp3">
+                </audio>
+                <div class="lines">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                    <div class="line4"></div>
+                    <div class="line5"></div>
+                    <div class="line6"></div>
+                    <div class="line7"></div>
+                    <div class="line8"></div>
+                    <div class="line9"></div>
+                    <div class="line10"></div>
+                    <div class="line11"></div>
+                    <div class="line12"></div>
+                    <div class="line13"></div>
+                    <div class="line14"></div>
+                    <div class="line15"></div>
+                    <div class="line16"></div>
+                    <div class="line17"></div>
+                    <div class="line18"></div>
+                </div>
+            </div>
+
+            <div class="img-1 img-2">
+                <img src="./darling_movie_stills_015.jpg" alt=""><br><br>
+                <audio controls>
+                    <source src="./2-Darlingey-SenSongsMp3.Co.mp3" type="audio/mp3">
+                </audio>
+                <div class="lines">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                    <div class="line4"></div>
+                    <div class="line5"></div>
+                    <div class="line6"></div>
+                    <div class="line7"></div>
+                    <div class="line8"></div>
+                    <div class="line9"></div>
+                    <div class="line10"></div>
+                    <div class="line11"></div>
+                    <div class="line12"></div>
+                    <div class="line13"></div>
+                    <div class="line14"></div>
+                    <div class="line15"></div>
+                    <div class="line16"></div>
+                    <div class="line17"></div>
+                    <div class="line18"></div>
+                </div>
+            </div>
+
+            <div class="img-1 img-3">
+                <img src="./images.jpg" alt=""><br>
+                <audio controls>
+                    <source src="./Bulle-SenSongsMp3.Co.mp3" type="audio/mp3">
+                </audio>
+                <div class="lines">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                    <div class="line4"></div>
+                    <div class="line5"></div>
+                    <div class="line6"></div>
+                    <div class="line7"></div>
+                    <div class="line8"></div>
+                    <div class="line9"></div>
+                    <div class="line10"></div>
+                    <div class="line11"></div>
+                    <div class="line12"></div>
+                    <div class="line13"></div>
+                    <div class="line14"></div>
+                    <div class="line15"></div>
+                    <div class="line16"></div>
+                    <div class="line17"></div>
+                    <div class="line18"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

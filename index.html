@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            flex-flow: column;
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            position: relative;
+        }
+        .flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .out{
+            width: 200px;
+            height: 200px;
+            border: 20px solid #ff0095;
+            border-radius: 50%;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+            animation: rotate 1s linear infinite ;
+        }
+        .mid{
+            width: 160px;
+            left: 20px;
+            height: 160px;
+            top: 20px;
+            border: 20px solid #ff8800;
+            border-radius: 50%;
+            clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+            position: absolute;
+            animation: rotate 2s linear infinite reverse ;
+        }
+        .in{
+            width: 120px;
+            left: 40px;
+            height: 120px;
+            top: 40px;
+            border: 20px solid #00d9ff;
+            border-radius: 50%;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+            position: absolute;
+            animation: rotate 3s linear infinite ;
+        }
+        @keyframes rotate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .text{
+            top: 10px;
+            left: 20px;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        p{
+            font-size: 3em;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="out"></div>
+        <div class="mid"></div>
+        <div class="in"> <a href="./task.html" class="text">Click</a> </div>
+    </div><br><br>
+    <p>Loading....</p>
+</body>
+</html>
